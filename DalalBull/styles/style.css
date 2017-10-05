@@ -1,0 +1,20 @@
+label {
+ padding-top:5px;
+  width: 140px;
+  text-align: right;
+}
+body {
+    background-color: #012a48;
+}
+
+.navbar-default {
+    background-color: rgba(0,0,0,0.0);
+    border-color: rgba(0,0,0,0.0);
+    color: #fff;
+}
+
+.panel-info>.panel-heading {
+    color: #fff;
+    background-color: #002135;
+    border-color: #002135;
+}

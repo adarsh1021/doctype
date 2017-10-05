@@ -1,0 +1,476 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>DalalBull</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <script src="scripts/Chart.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-items" aria-expanded="false">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" style="color:rgb(0,163,227);">Excel 2016</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="menu-items" >
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" data-target="#notifications" data-toggle="collapse" style="color:white;">Notifications</a></li>
+                <li><a href="#" style="color:white;">Message</a></li>
+                <li><a href="#" style="color:white;">Profile</a></li>
+            </ul>
+        </div>
+
+        <hr>
+        <!--NOTIFICATIONS-->
+        <div class="collapse" id="notifications" style="width:100%;">
+            <div class="row" style="width:100%;">
+
+                  <div class="col-sm-1" >
+                    <img src="resources/dp.jpg" style="width:40px; height:40px;">
+                  </div>
+                  <div class="col-sm-11">
+                  <span style="font-size:12px;">Adarsh Menon - 2 hours ago</span><br>
+                  <span>Some notification here</span>
+
+              </div>
+            </div>
+            <hr>
+        </div>
+
+
+        <div class="row" style="padding:0px;">
+            <div class="col-md-1">
+                <span class="navbar-brand" style="color:#fff; font-size:13px;">DALAL BULL</span>
+            </div>
+            <div class="col-md-11">
+                <marquee class="navbar-text"><div style="color:green; display:inline;"><div style="color:white; display:inline;">INFY</div> 905.35  0.6%</div><span class="glyphicons glyphicons-arrow-up" aria-hidden="false"></span>&nbsp &nbsp<div style="color:red; display:inline;"><div style="color:white; display:inline;">IOC</div> 400.00 0.12%</div>&nbsp &nbsp <div style="color:green; display:inline;"><div style="color:white; display:inline;">INFY</div> 905.35  0.6%</div><span class="glyphicons glyphicons-arrow-up" aria-hidden="false"></span>&nbsp &nbsp<div style="color:red; display:inline;"><div style="color:white; display:inline;">IOC</div> 400.00 0.12%</div>&nbsp &nbsp <div style="color:green; display:inline;"><div style="color:white; display:inline;">INFY</div> 905.35  0.6%</div><span class="glyphicons glyphicons-arrow-up" aria-hidden="false"></span>&nbsp &nbsp<div style="color:red; display:inline;"><div style="color:white; display:inline;">IOC</div> 400.00 0.12%</div>&nbsp &nbsp</marquee>
+            </div>
+        </div>
+        <hr>
+    </div>
+</nav>
+
+
+
+
+
+<nav class="navbar navbar-light navbar-right" style="margin-right:20px;">
+      <a class="navbar-brand" href="#" data-toggle="modal" data-target="#buy">
+        <img src="resources/dollar.png" width="30" height="30" alt="" style="-webkit-filter: invert(100%);">
+      </a>
+    <a class="navbar-brand" href="#">
+        <img src="resources/calendar.png" width="30" height="30" alt="" style="-webkit-filter: invert(100%);">
+    </a>
+
+</nav>
+
+
+<!--BUY MODAL-->
+<div class="modal fade" id="buy" tabindex="-1" role="dialog" aria-labelledby="buyModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h5 class="modal-title" id="buyModalTitle" align="center">BUY</h5>
+      </div>
+      <div class="modal-body">
+        <!-- Modal Content -->
+          <div class="container">
+              <form>
+                <div class="form-group row">
+                  <label for="company" class="col-sm-2 col-form-label">Company</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="company">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="company" class="col-sm-2 col-form-label">Quantity</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="quantity">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="company" class="col-sm-2 col-form-label">Buy/Short Sell</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="buyshortsell">
+                  </div>
+                </div>
+
+                  <h5 class="modal-title">Pending Order</h5>
+
+                <div class="form-group row">
+                  <label for="company" class="col-sm-2 col-form-label">Desired Price</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="desiredprice">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="container">
+                <h4>TRANSACTION DETAILS</h4>
+            </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Buy Stock</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row" style="margin-top:100px; padding:20px; color:white;">
+    <div class="col-md-3">
+        <div class="panel">
+            <div class="panel-body" style="background-color:#002135;">
+                <div class="heading-text">Cash available</div>
+                <div class="row" style="margin-left:20px;">
+                    10000000
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel">
+            <div class="panel-body" style="background-color:#002135;">
+                <div class="heading-text">Total Players</div>
+                <div class="row" style="margin-left:20px;">
+                    body row
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel">
+            <div class="panel-body" style="background-color:#002135;">
+                <div class="heading-text">No. of Transactions</div>
+                <div class="row" style="margin-left:20px;">
+                    0
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel">
+            <div class="panel-body" style="background-color:#002135;">
+                <div class="heading-text">Change</div>
+                <div class="row" style="margin-left:20px;">
+                    9585.1
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<body>
+
+<div class="row" style="padding:20px;">
+    <div class="col-md-8">
+        <div class="panel panel-info">
+          <div class="panel-heading">Graph</div>
+          <div class="panel-body">
+
+                          <!-- Styles -->
+            <style>
+            #chartdiv {
+                width	: 100%;
+                height	: 500px;
+            }
+            </style>
+
+            <!-- Resources -->
+            <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+            <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+            <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+            <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+            <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+            <!-- Chart code -->
+            <script>
+                    var chart = AmCharts.makeChart("chartdiv", {
+                        "type": "serial",
+                        "theme": "light",
+                        "marginTop":0,
+                        "marginRight": 80,
+                        "dataProvider": [{
+                            "year": "1950",
+                            "value": -0.307
+                        }, {
+                            "year": "1951",
+                            "value": -0.168
+                        }, {
+                            "year": "1952",
+                            "value": -0.073
+                        }, {
+                            "year": "1953",
+                            "value": -0.027
+                        }, {
+                            "year": "1954",
+                            "value": -0.251
+                        }, {
+                            "year": "1955",
+                            "value": -0.281
+                        }, {
+                            "year": "1956",
+                            "value": -0.348
+                        }, {
+                            "year": "1957",
+                            "value": -0.074
+                        }, {
+                            "year": "1958",
+                            "value": -0.011
+                        }, {
+                            "year": "1959",
+                            "value": -0.074
+                        }, {
+                            "year": "1960",
+                            "value": -0.124
+                        }, {
+                            "year": "1961",
+                            "value": -0.024
+                        }, {
+                            "year": "1962",
+                            "value": -0.022
+                        }, {
+                            "year": "1963",
+                            "value": 0
+                        }, {
+                            "year": "1964",
+                            "value": -0.296
+                        }, {
+                            "year": "1965",
+                            "value": -0.217
+                        }, {
+                            "year": "1966",
+                            "value": -0.147
+                        }, {
+                            "year": "1967",
+                            "value": -0.15
+                        }, {
+                            "year": "1968",
+                            "value": -0.16
+                        }, {
+                            "year": "1969",
+                            "value": -0.011
+                        }, {
+                            "year": "1970",
+                            "value": -0.068
+                        }, {
+                            "year": "1971",
+                            "value": -0.19
+                        }, {
+                            "year": "1972",
+                            "value": -0.056
+                        }, {
+                            "year": "1973",
+                            "value": 0.077
+                        }, {
+                            "year": "1974",
+                            "value": -0.213
+                        }, {
+                            "year": "1975",
+                            "value": -0.17
+                        }, {
+                            "year": "1976",
+                            "value": -0.254
+                        }, {
+                            "year": "1977",
+                            "value": 0.019
+                        }, {
+                            "year": "1978",
+                            "value": -0.063
+                        }, {
+                            "year": "1979",
+                            "value": 0.05
+                        }, {
+                            "year": "1980",
+                            "value": 0.077
+                        }, {
+                            "year": "1981",
+                            "value": 0.12
+                        }, {
+                            "year": "1982",
+                            "value": 0.011
+                        }, {
+                            "year": "1983",
+                            "value": 0.177
+                        }, {
+                            "year": "1984",
+                            "value": -0.021
+                        }, {
+                            "year": "1985",
+                            "value": -0.037
+                        }, {
+                            "year": "1986",
+                            "value": 0.03
+                        }, {
+                            "year": "1987",
+                            "value": 0.179
+                        }, {
+                            "year": "1988",
+                            "value": 0.18
+                        }, {
+                            "year": "1989",
+                            "value": 0.104
+                        }, {
+                            "year": "1990",
+                            "value": 0.255
+                        }, {
+                            "year": "1991",
+                            "value": 0.21
+                        }, {
+                            "year": "1992",
+                            "value": 0.065
+                        }, {
+                            "year": "1993",
+                            "value": 0.11
+                        }, {
+                            "year": "1994",
+                            "value": 0.172
+                        }, {
+                            "year": "1995",
+                            "value": 0.269
+                        }, {
+                            "year": "1996",
+                            "value": 0.141
+                        }, {
+                            "year": "1997",
+                            "value": 0.353
+                        }, {
+                            "year": "1998",
+                            "value": 0.548
+                        }, {
+                            "year": "1999",
+                            "value": 0.298
+                        }, {
+                            "year": "2000",
+                            "value": 0.267
+                        }, {
+                            "year": "2001",
+                            "value": 0.411
+                        }, {
+                            "year": "2002",
+                            "value": 0.462
+                        }, {
+                            "year": "2003",
+                            "value": 0.47
+                        }, {
+                            "year": "2004",
+                            "value": 0.445
+                        }, {
+                            "year": "2005",
+                            "value": 0.47
+                        }],
+                        "valueAxes": [{
+                            "axisAlpha": 0,
+                            "position": "left"
+                        }],
+                        "graphs": [{
+                            "id":"g1",
+                            "balloonText": "[[category]]<br><b><span style='font-size:14px;'>[[value]]</span></b>",
+                            "bullet": "round",
+                            "bulletSize": 8,
+                            "lineColor": "#d1655d",
+                            "lineThickness": 2,
+                            "negativeLineColor": "#637bb6",
+                            "type": "smoothedLine",
+                            "valueField": "value"
+                        }],
+                        "chartScrollbar": {
+                            "graph":"g1",
+                            "gridAlpha":0,
+                            "color":"#888888",
+                            "scrollbarHeight":55,
+                            "backgroundAlpha":0,
+                            "selectedBackgroundAlpha":0.1,
+                            "selectedBackgroundColor":"#888888",
+                            "graphFillAlpha":0,
+                            "autoGridCount":true,
+                            "selectedGraphFillAlpha":0,
+                            "graphLineAlpha":0.2,
+                            "graphLineColor":"#c2c2c2",
+                            "selectedGraphLineColor":"#888888",
+                            "selectedGraphLineAlpha":1
+
+                        },
+                        "chartCursor": {
+                            "categoryBalloonDateFormat": "YYYY",
+                            "cursorAlpha": 0,
+                            "valueLineEnabled":true,
+                            "valueLineBalloonEnabled":true,
+                            "valueLineAlpha":0.5,
+                            "fullWidth":true
+                        },
+                        "dataDateFormat": "YYYY",
+                        "categoryField": "year",
+                        "categoryAxis": {
+                            "minPeriod": "YYYY",
+                            "parseDates": true,
+                            "minorGridAlpha": 0.1,
+                            "minorGridEnabled": true
+                        },
+                        "export": {
+                            "enabled": true
+                        }
+                    });
+
+                    chart.addListener("rendered", zoomChart);
+                    if(chart.zoomChart){
+                        chart.zoomChart();
+                    }
+
+                    function zoomChart(){
+                        chart.zoomToIndexes(Math.round(chart.dataProvider.length * 0.4), Math.round(chart.dataProvider.length * 0.55));
+                    }
+            </script>
+
+            <!-- HTML -->
+            <div id="chartdiv"></div>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-info">
+          <div class="panel-heading">Leaderboard</div>
+          <div class="panel-body">
+              <div class="row">
+                  <div class="col-sm-2" >
+                    <img src="resources/dp.jpg" style="width:40px; height:40px;">
+                  </div>
+                  <div class="col-sm-6">
+                  <span>Adarsh Menon</span><br>
+                  <span>1234567</span>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
